@@ -1,0 +1,37 @@
+<app-header (contactClick)="scrollTo('contact')"></app-header>
+
+<main class="page">
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <span class="badge">Фриланс-разработчик · Angular · React · Node.js</span>
+      <h1 class="h1">Создаю быстрые веб-приложения под ключ</h1>
+      <p class="lead">
+        Привет! Я Айхан. Помогаю стартапам и малому бизнесу запускать сайты и веб-сервисы: от прототипа в Figma до
+        релиза.
+      </p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary" (click)="scrollTo('projects')">
+          Смотреть проекты
+          <span class="icon" style="--icon: url(assets/icons/icon-arrow-right.svg)" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-secondary">Скачать резюме</button>
+      </div>
+    </div>
+    <img src="assets/images/photo-specialist@1x.jpg" alt="Айхан Рахманкулов, фриланс-разработчик" class="photo" />
+  </section>
+
+  <app-project-list id="projects" class="section"></app-project-list>
+
+  <section id="contact" class="contact">
+    <div>
+      <h2 class="contact-title">Обсудим ваш проект?</h2>
+      <p class="contact-text">Напишите на почту — отвечу в течение рабочего дня.</p>
+    </div>
+    <a class="btn btn-primary" href="mailto:hello@aykhan.dev">
+      Написать
+      <span class="icon" style="--icon: url(assets/icons/icon-contact.svg)" aria-hidden="true"></span>
+    </a>
+  </section>
+</main>
+
+<footer class="footer">© 2026 aykhan.dev · Портфолио фриланс-разработчика</footer>
