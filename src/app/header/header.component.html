@@ -1,0 +1,32 @@
+<header class="header">
+  <a href="#home" class="logo" aria-label="aykhan.dev — на главную">
+    <img src="assets/icons/logo-mark.svg" alt="" width="36" height="36" />
+    <span>aykhan<span class="logo-accent">.dev</span></span>
+  </a>
+
+  <nav aria-label="Основное меню">
+    <ul class="nav">
+      <li *ngFor="let item of navItems">
+        <a
+          [href]="'#' + item.id"
+          class="nav-item"
+          [class.active]="item.id === activeId"
+          [attr.aria-current]="item.id === activeId ? 'page' : null"
+          (click)="select(item)"
+        >
+          <span class="icon" [style.--icon]="'url(' + item.icon + ')'" aria-hidden="true"></span>
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="actions">
+    <span class="status">Открыт к проектам</span>
+    <img src="assets/images/photo-specialist@1x.jpg" alt="Фото специалиста" class="avatar" />
+    <button type="button" class="btn btn-primary" (click)="contactClick.emit()">
+      Связаться
+      <span class="icon" style="--icon: url(assets/icons/icon-arrow-right.svg)" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
