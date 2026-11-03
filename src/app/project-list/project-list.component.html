@@ -1,0 +1,10 @@
+<section class="list">
+  <div class="list-header">
+    <h2 class="list-title">Избранные проекты</h2>
+    <span class="counter">{{ projects.length }} проекта</span>
+  </div>
+
+  <div class="grid">
+    <app-project-card *ngFor="let project of projects; trackBy: trackById" [project]="project"></app-project-card>
+  </div>
+</section>
